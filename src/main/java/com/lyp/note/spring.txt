@@ -1,0 +1,24 @@
+Spring 与传统操作系统不同点：
+为开发者集中管理Java企业应用和Web应用中涉及到的数据持久化，事务处理，消息中间件，分布式计算等抽象资源
+并在此基础上，为应用提供一个基于POJO的开发环境。
+
+核心  组件  应用
+MVC JDBC 事务处理
+数据持久化，数据集成，事务处理，消息中间件，Web2.0应用，分布式计算	
+
+IOC容器 包含了最基本IoC BeanFactory的接口和实现
+IOC 容器最近本接口<BeanFactory> 也提供了一系列接口的实现
+XmlBeanFactroy 就是最基本的BeanFactory (IoC容器) ，能够支持XML文件配置的Bean定义信息	
+还需要在IoC容器外围提供其他的支持，这些支持包括Resource访问资源的抽象和定位，
+ApplicationContext为IoC容器的高级形态
+FileSystemXmlApplicationContext
+ClassPathXmlApplcationContext
+
+AOP
+AspectJ作为AOP的一个特定实现，同时还在JVM动态代理/CGLIB的基础上实现类一个AOP框架
+作为Spring 继承其他模块的工具比如TransactionProxyFactoryBean声明式事务处理，就是通过AOP集成到Spring z中的
+建立AOP代理对象，AOP拦截，各种Advice通知的过程
+
+
+MVC
+以DispathcerServlet为核心实现了MVC模式，与Web容器环境的集成，Web请求拦截，分发，处理和ModelAndView数据返回
